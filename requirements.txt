@@ -3,4 +3,4 @@ kagglehub
 pandas
 os
 numpy
-sklearn
+scikit-learn
