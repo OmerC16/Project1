@@ -44,6 +44,6 @@ st.badge("Note that the prediction is relevant to when the wing is at an angle o
 number = st.number_input("Enter a speed (200 - 300) kmh", value=200, placeholder="Enter speed")
 if (number >= 200 and number <= 300):
   prediction = round(model.predict(np.array([[number]]))[0], 2)
-  st.write("The downforce (N) that will be produced when moving at a speed of - " + int(number) + "kmh is " + float(prediction) + "N")
+  st.write("The downforce (N) that will be produced when moving at a speed of - " + str(number) + "kmh is " + str(prediction) + "N")
 else:
   st.badge("Please enter a speed that is in the specified range.\nSpeed entered: " + str(number), color="red")
