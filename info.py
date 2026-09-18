@@ -19,4 +19,5 @@ if (st.button("Download dataset")):
   path = kagglehub.dataset_download(KAGGLE_DATASET)
   csv_path = os.path.join(path, CSV_TABLE)
   data = pd.read_csv(csv_path)
-  st.dataframe(pd.DataFrame(data[:5]))
+  st.dataframe(pd.DataFrame(data[:10]))
+  st.info("The provided table displays the first 10 rows of the dataset")
