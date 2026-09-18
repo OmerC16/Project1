@@ -16,8 +16,7 @@ CSV_TABLE = "actaruslab_f1_telemetry_2026.csv"
 st.title("Model explanation")
 
 if (st.button("Download dataset")):
-  with st.spinner("Downloading F1 Aerodynamics dataset"):
-    path = kagglehub.dataset_download(KAGGLE_DATASET)
-    csv_path = os.path.join(path, CSV_TABLE)
-    data = pd.read_csv(csv_path)
-    st.dataframe(pd.DataFrame(data))
+  path = kagglehub.dataset_download(KAGGLE_DATASET)
+  csv_path = os.path.join(path, CSV_TABLE)
+  data = pd.read_csv(csv_path)
+  st.dataframe(pd.DataFrame(data[:5]))
