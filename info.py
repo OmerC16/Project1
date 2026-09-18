@@ -12,7 +12,7 @@ KAGGLE_DATASET = "igormerlinicomposer/f1-aerodynamic-stability-and-porpoising-15
 FEATURE_COLUMN = "speed_kmh"
 TARGET_COLUMN = "downforce_n"
 WING_ANGLE = "wing_angle_deg"
-CSV_TABLE = "actaruslab_f1_telemetry_2026.csv
+CSV_TABLE = "actaruslab_f1_telemetry_2026.csv"
 
 st.title("Model explanation")
 
