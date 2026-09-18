@@ -1,3 +1,11 @@
+import streamlit as st
+
+def page_2():
+    st.title("Page 2")
+
+pg = st.navigation(["main.py", page_2])
+pg.run()
+
 """import streamlit as st
 import kagglehub
 import pandas as pd
@@ -39,10 +47,3 @@ y_hat = model.predict(X_reshaped)
 model_loss = np.mean(np.abs(y - y_hat))
 
 st.title("Hello")"""
-import streamlit as st
-
-def page_2():
-    st.title("Page 2")
-
-pg = st.navigation(["main.py", page_2])
-pg.run()
