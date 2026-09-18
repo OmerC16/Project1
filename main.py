@@ -1,4 +1,4 @@
-import streamlit as st
+"""import streamlit as st
 import kagglehub
 import pandas as pd
 import os
@@ -38,4 +38,11 @@ b = model.intercept_
 y_hat = model.predict(X_reshaped)
 model_loss = np.mean(np.abs(y - y_hat))
 
-st.title("Hello")
+st.title("Hello")"""
+import streamlit as st
+
+def page_2():
+    st.title("Page 2")
+
+pg = st.navigation(["page_1.py", page_2])
+pg.run()
