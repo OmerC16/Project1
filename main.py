@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.title("Page 1")
 def page_2():
     st.title("Page 2")
 
