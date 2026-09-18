@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import numpy as np
 from sklearn.linear_model import LinearRegression
+import time
 
 # Constants
 KAGGLE_DATASET = "igormerlinicomposer/f1-aerodynamic-stability-and-porpoising-150k-samp"
