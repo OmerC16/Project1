@@ -38,4 +38,5 @@ b = model.intercept_
 y_hat = model.predict(X_reshaped)
 model_loss = np.mean(np.abs(y - y_hat))
 
-st.title("Hello")
+number = st.slider("Enter speed: ", 0, 400, 0)
+st.write(model.predict(number))
