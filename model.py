@@ -18,8 +18,8 @@ csv_path = os.path.join(path, CSV_TABLE)
 data = pd.read_csv(csv_path)
 
 # Define X and y variables
-X = data.loc[data[WING_ANGLE].between(0, 10), FEATURE_COLUMN].to_numpy()
-y = data.loc[data[WING_ANGLE].between(0, 10), TARGET_COLUMN].to_numpy()
+X = data.loc[data[WING_ANGLE].between(5, 10), FEATURE_COLUMN].to_numpy()
+y = data.loc[data[WING_ANGLE].between(5, 10), TARGET_COLUMN].to_numpy()
 
 # baseline model calculation and loss
 baseline_prediction = np.mean(y)
@@ -40,7 +40,7 @@ model_loss = np.mean(np.abs(y - y_hat))
 
 # Actual prediction
 st.title("Predict the downforce produced by a F1 car by it's speed")
-st.badge("Note that the prediction is relevant to when the wing is at an angle of 25 - 30 degrees", color="yellow")
+st.badge("Note that the prediction is relevant to when the wing is at an angle of 5 - 10 degrees (So the car is moving at a straight line)", color="yellow")
 number = st.number_input("Enter a speed (200 - 300) kmh", value=100, placeholder="Enter speed")
 if (number >= 200 and number <= 300):
   number = np.array([[number]])
