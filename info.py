@@ -15,7 +15,8 @@ CSV_TABLE = "actaruslab_f1_telemetry_2026.csv"
 
 st.title("Model explanation")
 
-path = kagglehub.dataset_download(KAGGLE_DATASET)
-csv_path = os.path.join(path, CSV_TABLE)
-data = pd.read_csv(csv_path)
-data.head()
+if (st.button("Download dataset")):
+  path = kagglehub.dataset_download(KAGGLE_DATASET)
+  csv_path = os.path.join(path, CSV_TABLE)
+  data = pd.read_csv(csv_path)
+  data.head()
