@@ -38,7 +38,10 @@ b = model.intercept_
 y_hat = model.predict(X_reshaped)
 model_loss = np.mean(np.abs(y - y_hat))
 
-number = st.slider("Enter speed: ", 200, 400, 200)
+# Actual prediction
+st.title("Predict the downforce produced by a F1 car by it's speed")
+st.header("Note that the prediction is related to when the wing is at an angle of 25 - 30 degrees")
+number = st.number_input("Enter speed", value=None, placeholder="Enter speed")
 
 number = np.array([[number]])
 st.write(model.predict(number)[0])
