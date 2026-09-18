@@ -15,8 +15,7 @@ WING_ANGLE = "wing_angle_deg"
 CSV_TABLE = "actaruslab_f1_telemetry_2026.csv
 
 st.title("Model explanation")
-downloadBtn = st.button("Download the Dataset")
 
-if (downloadBtn)
+if (st.button("Download the Dataset"))
   with st.spinner("Downloading F1 aerodynamics dataset", show_time=True):
     path = kagglehub.dataset_download(KAGGLE_DATASET)
