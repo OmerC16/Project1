@@ -18,8 +18,8 @@ csv_path = os.path.join(path, CSV_TABLE)
 data = pd.read_csv(csv_path)
 
 # Define X and y variables
-X = data.loc[data[WING_ANGLE].between(5, 10), FEATURE_COLUMN].to_numpy()
-y = data.loc[data[WING_ANGLE].between(5, 10), TARGET_COLUMN].to_numpy()
+X = data.loc[data[WING_ANGLE].between(25, 30), FEATURE_COLUMN].to_numpy()
+y = data.loc[data[WING_ANGLE].between(25, 30), TARGET_COLUMN].to_numpy()
 
 # baseline model calculation and loss
 baseline_prediction = np.mean(y)
