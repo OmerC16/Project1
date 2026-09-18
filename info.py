@@ -14,10 +14,10 @@ WING_ANGLE = "wing_angle_deg"
 CSV_TABLE = "actaruslab_f1_telemetry_2026.csv"
 
 st.title("Model explanation")
-
+st.info("First we need to choose and download the dataset.\nThe dataset I chose is a F1 car's Aerodynamics data")
 if (st.button("Download dataset")):
   path = kagglehub.dataset_download(KAGGLE_DATASET)
   csv_path = os.path.join(path, CSV_TABLE)
   data = pd.read_csv(csv_path)
   st.dataframe(pd.DataFrame(data[:10]))
-  st.info("The provided table displays the first 10 rows of the dataset")
+  st.warning("The provided table displays the first 10 rows of the dataset")
