@@ -18,4 +18,4 @@ st.title("Model explanation")
 
 if (st.button("Download the Dataset")):
   with st.spinner("Downloading F1 aerodynamics dataset", show_time=True):
-    path = kagglehub.dataset_download(KAGGLE_DATASET)
+    path = kagglehub.dataset_download(igormerlinicomposer/f1-aerodynamic-stability-and-porpoising-150k-samp)
