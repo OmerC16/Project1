@@ -41,8 +41,8 @@ model_loss = np.mean(np.abs(y - y_hat))
 # Actual prediction
 st.title("Predict the downforce produced by a F1 car by it's speed")
 st.header("Note that the prediction is relevant to when the wing is at an angle of 25 - 30 degrees")
-number = st.number_input("Enter a speed (100 - 300) kmh", value=100, placeholder="Enter speed")
-if (number >= 100 and number <= 300):
+number = st.number_input("Enter a speed (200 - 300) kmh", value=100, placeholder="Enter speed")
+if (number >= 200 and number <= 300):
   number = np.array([[number]])
   st.write(model.predict(number)[0])
 else:
