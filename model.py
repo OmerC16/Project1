@@ -46,4 +46,4 @@ if (number >= 200 and number <= 300):
   number = np.array([[number]])
   st.write(model.predict(number)[0])
 else:
-  st.badge("Please enter a speed that is in the specified range.\nSpeed entered: " + number, color="red")
+  st.badge("Please enter a speed that is in the specified range.\nSpeed entered: " + str(number), color="red")
