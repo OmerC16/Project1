@@ -3,8 +3,10 @@ import streamlit as st
 st.title("Page 1")
 def page_2():
     st.title("Page 2")
+def page_1():
+    st.tite("Page 1")
 
-pg = st.navigation(["main.py", page_2])
+pg = st.navigation([page_1, page_2])
 pg.run()
 
 """import streamlit as st
