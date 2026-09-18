@@ -1,3 +1,2 @@
-streamlit
 kagglehub
-pandas
+scikit-learn
