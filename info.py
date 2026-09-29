@@ -75,7 +75,7 @@ elif st.session_state.stage == 2:
         "downforce data to include only the lines in which the wing angle is "
         "relatively similar. By doing so, I made the speed the main factor that "
         "controls the amount of downforce.\n\nThe wing angle that I have based it "
-        "on is 5 - 10 degrees."
+        "on is 8 - 10 degrees."
     )
 
     st.session_state.x = x
@@ -114,7 +114,7 @@ elif st.session_state.stage == 3:
 
     st.info(
         "Note that there is a pretty Linear relation between x and y.\n\n"
-        "This chart displays only 1,000/24,880 rows of the dataset, in order to make the experience smoother."
+        "This chart displays only 1,000/9,845 rows of the dataset, in order to make the experience smoother."
     )
 
     con, prev = st.columns(2)
