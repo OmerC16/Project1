@@ -61,8 +61,8 @@ elif st.session_state.stage == 2:
     )
 
     data = st.session_state.data
-    x = data.loc[data[WING_ANGLE].between(5, 10), FEATURE_COLUMN].to_numpy()
-    y = data.loc[data[WING_ANGLE].between(5, 10), TARGET_COLUMN].to_numpy()
+    x = data.loc[data[WING_ANGLE].between(8, 10), FEATURE_COLUMN].to_numpy()
+    y = data.loc[data[WING_ANGLE].between(8, 10), TARGET_COLUMN].to_numpy()
     df = pd.DataFrame({
         FEATURE_COLUMN: x[:10],
         TARGET_COLUMN: y[:10],
@@ -133,7 +133,7 @@ elif st.session_state.stage == 4:
 
     st.write(
         "If the average of the y values is more accurate than the model's prediction, there will be no reason to use it.\n\n"
-        "For this reason, the next thing I will do is to calculate the average of the y values and it's loss, I will later compare this value to the model's loss."
+        "For this reason, the next thing I will do is to calculate the average of the y values and its loss, I will later compare this value to the model's loss."
     )
 
     baseline_prediction = round(np.mean(y), 2)
