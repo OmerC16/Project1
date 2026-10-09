@@ -41,8 +41,8 @@ model_loss = np.mean(np.abs(y - y_hat))
 # Actual prediction
 st.title("Predict the downforce produced by the air around a F1 car based on its speed")
 st.info("Note that the prediction is relevant to when the wing is at an angle of 8 - 10 degrees")
-number = st.number_input("Enter a speed (200 - 300) kmh", value=200, placeholder="Enter speed")
-if (number >= 200 and number <= 300):
+number = st.number_input("Enter a speed (150 - 250) kmh", value=150, placeholder="Enter speed")
+if (number >= 150 and number <= 250):
   prediction = round(model.predict(np.array([[number]]))[0], 2)
   st.success("The downforce (N) that will be produced when moving at a speed of - " + str(number) + "kmh is " + str(prediction) + "N")
 else:
