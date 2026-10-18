@@ -1,8 +1,9 @@
 import streamlit as st
 
 info = st.Page("info.py", title="Info")
-model = st.Page("model.py", title="Model")
+model_1 = st.Page("model.py", title="Model (One feature)")
+model_2 = st.Page("model_2.py", title="Model (Two features)")
 
-pg = st.navigation([info, model])
+pg = st.navigation([info, model_1])
 
 pg.run()
